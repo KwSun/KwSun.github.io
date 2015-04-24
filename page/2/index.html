@@ -65,110 +65,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Java之类变量、类方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/22/Java之类变量、类方法/" class="article-date">
-  <time datetime="2015-01-22T09:46:50.000Z" itemprop="datePublished">2015-01-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/22/Java之类变量、类方法/">Java之类变量、类方法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="类变量">类变量</h2><h3 id="什么是类变量？">什么是类变量？</h3><p>类变量是该类的所有对象共享的变量，任何一个该类的对象去访问它时，取到的都是相同的值，同样任何一个该类的对象去修改它时，修改的也是同一个变量。</p>
-<h3 id="如何定义类变量？">如何定义类变量？</h3><pre><code>定义语法：
-    访问修饰符 <span class="keyword">static</span> 数据类型 变量名;
-
-如何访问类变量？
-    类名.类变量名  或者  对象名.类变量名
-
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
-    <span class="keyword">static</span> <span class="keyword">int</span> i=<span class="number">1</span>;
-    <span class="keyword">static</span>{
-        <span class="comment">//该静态区域块只被执行一次</span>
-        i++;
-        System.<span class="keyword">out</span>.println(<span class="string">"执行一次"</span>);
-    }
-    <span class="function"><span class="keyword">public</span> <span class="title">Demo</span><span class="params">()</span></span>{  <span class="comment">//建立Demo()构造函数</span>
-        System.<span class="keyword">out</span>.println(<span class="string">"执行二次"</span>);
-        i++;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
-        Demo t1=<span class="keyword">new</span> Demo();  <span class="comment">//创建t1对象实例并调用Demo函数</span>
-        System.<span class="keyword">out</span>.println(t1.i);
-
-        Demo t2=<span class="keyword">new</span> Demo();
-        System.<span class="keyword">out</span>.println(t2.i);
-        }    
-}
-</code></pre><h3 id="类变量与实例变量区别">类变量与实例变量区别</h3><ol>
-<li>加上static称为类变量或静态变量，否则称为实例变量</li>
-<li>类变量是与类相关的，公共的属性</li>
-<li>实例变量属于每个对象个体的属性</li>
-<li>类变量可以通过 [类名.类变量名]  直接访问</li>
-</ol>
-<h2 id="类方法">类方法</h2><h3 id="什么是类方法">什么是类方法</h3><p>类方法是属于所有对象实例的，其形式如下：</p>
-<pre><code>    访问修饰符 static 数据返回类型 方法名<span class="comment">()</span>{}
-注意：类方法中不能访问非静态变量<span class="comment">(类变量)</span>。
-使用：类名.类方法名 或者 对象名.类方法名
-</code></pre><p>static静态的方法可以访问static静态变量，不能访问非静态变量(类变量)；<br>      非静态方法可以访问非静态变量(类变量)同时也可以访问static静态变量。</p>
-<pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>        {
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
-    <span class="comment">//创建一个学生</span>
-    Stu stu1=<span class="keyword">new</span> Stu(<span class="number">29</span>,<span class="string">"aa"</span>,<span class="number">340</span>);
-    Stu stu2=<span class="keyword">new</span> Stu(<span class="number">29</span>,<span class="string">"aa"</span>,<span class="number">240</span>);
-    System.<span class="keyword">out</span>.println(Stu.getTotalFee());
-    }
-}
-
-<span class="comment">//学生类</span>
-<span class="keyword">class</span> <span class="title">Stu</span>{
-    <span class="keyword">int</span> age;
-    String name;
-    <span class="keyword">int</span> fee;
-    <span class="keyword">static</span> <span class="keyword">int</span> totalFee;
-    <span class="function"><span class="keyword">public</span> <span class="title">Stu</span><span class="params">(<span class="keyword">int</span> age,String name,<span class="keyword">int</span> fee)</span></span>{
-        <span class="keyword">this</span>.age=age;
-        <span class="keyword">this</span>.name=name;
-        totalFee+=fee;
-    }
-    <span class="comment">//返回总学费[这是一个类方法(静态方法)]</span>
-    <span class="comment">//java中规则：类变量原则上用类方法去访问或操作</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">getTotalFee</span><span class="params">()</span></span>{
-        <span class="keyword">return</span> totalFee;
-    }
-}
-</code></pre><h3 id="什么时候需要用类方法">什么时候需要用类方法</h3><ol>
-<li>类方法属于与类相关的，公共的方法</li>
-<li>实例方法属于每个对象个体的方法</li>
-<li>类方法可以通过 [类名.类方法名]  直接访问</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/22/Java之类变量、类方法/" data-id="ci8vkp8340007ai0ko9ftv9x8" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Java之this" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/20/Java之this/" class="article-date">
@@ -245,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/20/Java之this/" data-id="ci8vkp83j000eai0k1l7tnqcj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/20/Java之this/" data-id="ci8vlgscf000eez0k7txp12bo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -329,7 +225,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/20/Java之构造方法/" data-id="ci8vkp8390009ai0k5g1h6i89" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/20/Java之构造方法/" data-id="ci8vlgsc30009ez0k4op2mf1a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -457,7 +353,7 @@ public <span class="type">float</span> add3(<span class="type">int</span> num1,<
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/18/Java之成员方法/" data-id="ci8vkp83b000aai0kfjqdvpev" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/18/Java之成员方法/" data-id="ci8vlgsc8000aez0ku5oblpnq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -586,7 +482,7 @@ System.out.println(<span class="literal">a</span>.age)<span class="comment">;//�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/17/Java之类与对象/" data-id="ci8vkp8350008ai0k0v1bpt2d" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/17/Java之类与对象/" data-id="ci8vlgsc10008ez0kc0wqwyff" class="article-share-link">Share</a>
       
       
     </footer>
@@ -693,7 +589,7 @@ System.out.println(<span class="string">"a="</span>+<span class="literal">a</spa
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/16/Java之三大流程控制/" data-id="ci8vkp83h000dai0k9a7b2tcl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/16/Java之三大流程控制/" data-id="ci8vlgscd000dez0kvci3f2il" class="article-share-link">Share</a>
       
       
     </footer>
@@ -770,7 +666,7 @@ System.out.println(<span class="string">"a="</span>+<span class="literal">a</spa
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/09/Java之基本数据类型/" data-id="ci8vkp83f000cai0kvgfmu7aa" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/09/Java之基本数据类型/" data-id="ci8vlgscb000cez0kln6j7b95" class="article-share-link">Share</a>
       
       
     </footer>
@@ -799,7 +695,7 @@ System.out.println(<span class="string">"a="</span>+<span class="literal">a</spa
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -809,10 +705,6 @@ System.out.println(<span class="string">"a="</span>+<span class="literal">a</spa
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2015/04/23/2015-04-23-xinjian/">xinjian</a>
-          </li>
         
           <li>
             <a href="/2015/04/19/2015-04-19-浅析Http/">浅析Http</a>
@@ -828,6 +720,10 @@ System.out.println(<span class="string">"a="</span>+<span class="literal">a</spa
         
           <li>
             <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/28/多态/">多态</a>
           </li>
         
       </ul>
