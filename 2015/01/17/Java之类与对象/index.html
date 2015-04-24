@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Java之类与对象 | xiaoheihei&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="类和对象的关系把猫的特性提取出来—&amp;gt;猫类—&amp;gt;对象(实例)
+注意：从猫类到对象，目前有几种说法：
+
+创建一个对象；
+实例化一个对象；
+对类实例化.
+
+以后大家听到这些说法，不要模糊。(对象就是实例，实例就是对象)。java最大的特点就是面向对象。
+//定义猫类
+public class Demo{
+        public static void main(String []args">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java之类与对象">
+<meta property="og:url" content="http://yoursite.com/2015/01/17/Java之类与对象/index.html">
+<meta property="og:site_name" content="xiaoheihei's Blog">
+<meta property="og:description" content="类和对象的关系把猫的特性提取出来—&amp;gt;猫类—&amp;gt;对象(实例)
+注意：从猫类到对象，目前有几种说法：
+
+创建一个对象；
+实例化一个对象；
+对类实例化.
+
+以后大家听到这些说法，不要模糊。(对象就是实例，实例就是对象)。java最大的特点就是面向对象。
+//定义猫类
+public class Demo{
+        public static void main(String []args">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java之类与对象">
+<meta name="twitter:description" content="类和对象的关系把猫的特性提取出来—&amp;gt;猫类—&amp;gt;对象(实例)
+注意：从猫类到对象，目前有几种说法：
+
+创建一个对象；
+实例化一个对象；
+对类实例化.
+
+以后大家听到这些说法，不要模糊。(对象就是实例，实例就是对象)。java最大的特点就是面向对象。
+//定义猫类
+public class Demo{
+        public static void main(String []args">
+  
+    <link rel="alternative" href="/atom.xml" title="xiaoheihei&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">xiaoheihei&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Technology is Art</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java之类与对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/17/Java之类与对象/" class="article-date">
+  <time datetime="2015-01-17T03:22:55.000Z" itemprop="datePublished">2015-01-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java之类与对象
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="类和对象的关系">类和对象的关系</h2><p>把猫的特性提取出来—&gt;猫类—&gt;对象(实例)</p>
+<p>注意：从猫类到对象，目前有几种说法：</p>
+<ol>
+<li>创建一个对象；</li>
+<li>实例化一个对象；</li>
+<li>对类实例化.</li>
+</ol>
+<p>以后大家听到这些说法，不要模糊。(对象就是实例，实例就是对象)。java最大的特点就是面向对象。</p>
+<pre><code><span class="comment">//定义猫类</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
+        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
+        <span class="comment">//创建一个猫对象</span>
+        Cat cat1=<span class="keyword">new</span> Cat();<span class="comment">//Cat是定义的一个数据类型</span>
+        <span class="comment">//Cat cat1;</span>
+        <span class="comment">//cat1=new Cat();// 等同于 Cat cat1=new Cat();</span>
+        <span class="comment">//访问属性的 对象名.属性名字</span>
+        cat1.age=<span class="number">3</span>;
+        cat1.name=<span class="string">"小白"</span>;
+        cat1.color=<span class="string">"白色"</span>;
+
+        <span class="comment">//创建第二只猫</span>
+        Cat cat2=<span class="keyword">new</span> Cat();
+        cat2.age=<span class="number">100</span>;
+        cat2.name=<span class="string">"小花"</span>;
+        cat2.color=<span class="string">"花色"</span>;  
+    }
+}
+</code></pre><p>java中如何定义一个类？[类名的首写字母大写]可根据程序的需要定义类</p>
+<pre><code><span class="class"><span class="keyword">class</span> <span class="title">Cat</span></span>{
+<span class="comment">//下面的就是类的成员变量/属性</span>
+<span class="built_in">int</span> agr;
+<span class="built_in">String</span> name;
+<span class="built_in">String</span> color;
+Master myMaster;
+}
+</code></pre><p>引用类型，比如建个主人类</p>
+<pre><code><span class="class"><span class="keyword">class</span> <span class="title">Master</span></span>{
+<span class="built_in">int</span> age;
+<span class="built_in">String</span> name;
+<span class="built_in">String</span> address;
+}
+</code></pre><h3 id="类和对象的区别和联系">类和对象的区别和联系</h3><ol>
+<li>类是抽象的，概念的，代表一类事物，比如人类，猫类..</li>
+<li>对象是具体的，实际的，代表一个具体事物</li>
+<li>类对象的模板，对象是类的一个个体，实例</li>
+</ol>
+<p>类—如何定义类</p>
+<p>一个全面的类定义比较复杂，如：</p>
+<pre><code><span class="keyword">package</span> 包名;
+<span class="class"><span class="keyword">class</span> <span class="title">类名</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">父类</span> <span class="title">implements</span>
+</span>接口名{
+ 成员变量;
+ 构造方法;
+ 成员方法;
+}
+</code></pre><p>类—类的成员变量</p>
+<p>成员变量是类的一个组成部分，一般是基本数据类型，也可是引用类型。比如我们前面定义猫类的int age 就是成员变量。</p>
+<p>对象—如何创建对象<br>创建一个对象有两种方法</p>
+<ol>
+<li><p>先声明再创建</p>
+<ul>
+<li>对象声明：类名 对象名</li>
+<li>对象创建：对象名=new 类名()</li>
+</ul>
+</li>
+<li><p>一步到位法</p>
+<ul>
+<li>类名 对象名=new 类名()</li>
+</ul>
+</li>
+</ol>
+<p>对象—如何访问(使用)对象的成员变量</p>
+<pre><code>对象名.变量名; <span class="comment">//简单先这样理解，以后加下控制符此表达就不准确了。</span>
+</code></pre><p>注意：对象总是存在内存中的</p>
+<p>为了让大家加深印象，我们定义一个人类(Person)(包括名字、年龄)。用一步到位法去创建一个对象</p>
+<p>我们看看下面一段代码:                      </p>
+<pre><code>Person <span class="literal">a</span>=new Person()<span class="comment">;                </span>
+<span class="literal">a</span>.age=<span class="number">10</span><span class="comment">;</span>
+<span class="literal">a</span>.name=<span class="string">"小明"</span><span class="comment">;</span>
+Person b<span class="comment">;</span>
+b=<span class="literal">a</span><span class="comment">;</span>
+System.out.printlin(b.age)<span class="comment">;</span>
+</code></pre><p> 请问：b.age究竟是多少？</p>
+<p>注意：对象总是存在内存中的</p>
+<p>在明白对象是如何在内存中存在后，请大家再看看下面的思考题，请问会输出什么信息？</p>
+<pre><code>Person1 <span class="literal">a</span>=new Person1()<span class="comment">;</span>
+<span class="literal">a</span>.age=<span class="number">10</span><span class="comment">;</span>
+<span class="literal">a</span>.name=<span class="string">"小明"</span><span class="comment">;</span>
+Person1 b<span class="comment">;</span>
+b=<span class="literal">a</span><span class="comment">;</span>
+System.out.println(b.name)<span class="comment">;//输出“小明”</span>
+b.age=<span class="number">200</span><span class="comment">;</span>
+System.out.println(<span class="literal">a</span>.age)<span class="comment">;//输出a.age为200</span>
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/17/Java之类与对象/" data-id="ci8vkp8350008ai0k0v1bpt2d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/01/18/Java之成员方法/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Java之成员方法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/01/16/Java之三大流程控制/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Java之三大流程控制</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/04/23/2015-04-23-xinjian/">xinjian</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/19/2015-04-19-浅析Http/">浅析Http</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/">D-day技术分享沙龙整理</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/04/Mysql之Mac下卸载大法/">Mysql之Mac下卸载大法</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 KongWell<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

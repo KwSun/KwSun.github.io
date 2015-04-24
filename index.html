@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>xiaoheihei&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Technology is Art">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xiaoheihei's Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="xiaoheihei's Blog">
+<meta property="og:description" content="Technology is Art">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="xiaoheihei's Blog">
+<meta name="twitter:description" content="Technology is Art">
+  
+    <link rel="alternative" href="/atom.xml" title="xiaoheihei&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">xiaoheihei&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Technology is Art</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-2015-04-23-xinjian" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/23/2015-04-23-xinjian/" class="article-date">
+  <time datetime="2015-04-23T13:44:22.000Z" itemprop="datePublished">2015-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/23/2015-04-23-xinjian/">xinjian</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/23/2015-04-23-xinjian/" data-id="ci8vkp87e000fai0krdgcj83a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-04-19-浅析Http" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/19/2015-04-19-浅析Http/" class="article-date">
+  <time datetime="2015-04-19T03:05:43.000Z" itemprop="datePublished">2015-04-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/19/2015-04-19-浅析Http/">浅析Http</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://7xi5yl.com1.z0.glb.clouddn.com/9.png" alt=""><br>昨天的多火课堂分享，小嘿嘿给大家介绍了有关Http的一些东西~</p>
+<p>首先，先看一看Http的历史~主要由3个版本</p>
+<ul>
+<li>Http/0.9&nbsp;&nbsp;&nbsp;&nbsp;已过时</li>
+<li>Http/1.0&nbsp;&nbsp;&nbsp;&nbsp;第一个在通讯中指定版本号的HTTP 协议版本。仍被广泛采用，特别是在代理服务器中。</li>
+<li>Http/1.1&nbsp;&nbsp;&nbsp;&nbsp;当前版本。<br>默认采用持久连接。<br>支持以管道方式同时发送多个请求，降低线路负载，提供传输速度。</li>
+</ul>
+<p>思考，如何不借助浏览器发起有关请求呢？</p>
+<ol>
+<li>通过程序实现处理Http请求的工具包（如HttpClient）；</li>
+<li>curl+URL；</li>
+</ol>
+<p>常用Http请求头：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/1.png" alt=""><br>常用Http响应头：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/2.png" alt=""><br>常用Http状态码：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/3.png" alt=""><br>请求消息头举例：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/4.png" alt=""><br>请求响应头举例：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/6.png" alt=""><br>发出请求的代码举例：</p>
+<p><img src="http://7xi5yl.com1.z0.glb.clouddn.com/7.png" alt=""></p>
+<p>防止盗链代码举例：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/8.png" alt=""><br>最后，向大家推荐2本介绍Http的书：《图解Http》、《Http权威指南》~<br>附：* <a href="http://pan.baidu.com/s/1i3CIjY1" target="_blank" rel="external">《浅析Http协议》</a>-小嘿嘿讲稿</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/19/2015-04-19-浅析Http/" data-id="ci8vkp8b9000gai0k7kn6ak71" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2015-04-19-D-day技术分享沙龙整理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/" class="article-date">
+  <time datetime="2015-04-19T02:59:36.000Z" itemprop="datePublished">2015-04-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/">D-day技术分享沙龙整理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://i2.tietuku.com/259b179bbf3810c1.jpg" alt="">  </p>
+<p>第一次参加<code>SegmentFault</code>组织的活动，收获很大。活动现场氛围特别棒，特别是那个抽奖的页面真的很棒，很想把源码拿过来学习下。唯一的遗憾就是今天没有抽到奖。  </p>
+<h2 id="寸志_前端开发与用户体验">寸志 前端开发与用户体验</h2><p>今天主要是去听<code>Teambition</code>的寸志老师去的，想去听寸志分享前端干货。这次寸志老师分享的主题是《前端开发与用户体验》，以<code>Teambition</code>的产品为例介绍前端技术在改进产品用户体验方面的应用。<br>{<1>}<img src="http://i2.tietuku.com/844766d38380d629.png" alt=""></1></p>
+<p>之前有用过<code>Teambition</code>这个团队协作工具来和后端同学进行合作过。感觉这个产品的用户体验过特别好。今天从寸志老师才得知产品用户体验过好是因为他们老板齐俊元是很重视设计。（果然老板重视设计就是不一样啊！）<br><code>Teambition</code>采用的前端框架是<code>Backbone</code>。之前听说这个前端框架，一个和<code>AngularJs</code>差不多前端<code>MVC</code>前端框架。但是比<code>AngularJs</code>出来早，<code>Teambition</code>团队采用<code>Backbone</code>加上<code>jquery</code>的一些插件来打造无刷新的交互体验。为什么选择<code>Backbone</code>是因为没有双向绑定，只会更新修改的部分，而不会更新其他部分。（对前端js框架还不是很了解，如果有叙述错误还请指正。）但我觉得对于前端工程师个人而言，<code>AngularJs</code>还是很适合我们的，毕竟它帮我们做了太多的事情。自己最近在研究Facebook的React,很想自己用React Native搞个自己的IOS APP出来。  </p>
+<p>自己最近一直在研究<code>HTML5</code>的一些新的JS API，今天寸志介绍他们在自己的产品<code>Teambition</code>中采用HTML5新的<code>Notification</code>API 在用户关闭浏览器的情况下来通知用户新的信息。使用<code>Offline Web Application</code>来离线一些资源，这样在用户断网的情况下同样可以获得很好的体验。自己在最后的圆桌环节同时也向今天的四位分享人提问了在现在的成熟的<code>Web</code>产品中有哪些新的HTML5的特性在产品中有应用。<br>我这里初略整理了一下答案：  </p>
+<ul>
+<li>使用localStorage来储存一些用户的信息，在一些web的应用中会采用indexDB来储存一些数据到本地。</li>
+<li>使用<code>Notification</code>API在用户没有使用浏览器的浏览网站的情况下来通知用户一些信息。</li>
+<li>使用<code>Offline Web Application</code>来离线一些资源，这样让用户特殊情况下没网时也能获得不错的体验!</li>
+<li>使用CSS3的像animation这种新的特性来制作动画效果。</li>
+</ul>
+<p><img src="http://i2.tietuku.com/16547a28f187c0d2.png" alt="">  </p>
+<p>现在网页设计需要考虑多终端，也就是响应式，在分享中寸志老师分享了他们团队优化响应式的经验：  </p>
+<ol>
+<li>他们会先设计手机的版本，然后由手机版本变更到PC版和PAD版本。  </li>
+<li>对于iphone的Retina屏幕他们会把图片的大小做到两倍大小，然后使用CSS来把图片大小缩小到一倍。</li>
+<li>使用CSS单位rem,然后使用js来控制根元素html里面的font-size。<br>此外分享中提及了：</li>
+</ol>
+<ul>
+<li>利用CSS3的动画来制作动画，给用户带来愉悦感。</li>
+<li>使用webfont来代替图片图标</li>
+<li>用<a href="https://github.com/mllrsohn/node-webkit-builder" target="_blank" rel="external">node-webkit</a>来把网页应用分装成单个应用。  </li>
+</ul>
+<h4 id="除了寸志老师的前端分享外之外,分享的嘉宾还有又拍云的张聪，扇贝网，暴走漫画的丁彦。因为自己最熟悉的是前端，对于后端和运维不是特别熟悉，所以这里不谢关于这三位大牛的总结了。">除了寸志老师的前端分享外之外,分享的嘉宾还有又拍云的张聪，扇贝网，暴走漫画的丁彦。因为自己最熟悉的是前端，对于后端和运维不是特别熟悉，所以这里不谢关于这三位大牛的总结了。</h4><p>下面是这三位大牛的演讲文稿:  </p>
+<ul>
+<li><a href="http://pan.baidu.com/s/1hqELDqs" target="_blank" rel="external">《Using ngx_lua in UPYUN》</a>-又拍云的张聪</li>
+<li><a href="http://pan.baidu.com/s/1jGswSiq" target="_blank" rel="external">《Ansible 在云环境中的使用》</a>-扇贝网的吴焱红 </li>
+<li><a href="http://pan.baidu.com/s/1pJzEpx5" target="_blank" rel="external">《暴走漫画数据挖掘从 0 到 1》</a>—暴走漫画的丁彦</li>
+</ul>
+<h3 id="圆桌讨论问答">圆桌讨论问答</h3><h4 id="1-_从一个普通的技术开发，到稍有知名度的开发者，你们觉得最艰难的时段是哪个时段？">1. 从一个普通的技术开发，到稍有知名度的开发者，你们觉得最艰难的时段是哪个时段？</h4><p>入门阶段，会受打击，但要端正心态。  </p>
+<p>每个人做的选择不一样，有很多路，没有哪一条是对的，要选择一条最合适你的。  </p>
+<p>技术面要广，多关注，多接触。  </p>
+<p>订阅技术博客，每天度技术文章，提高自己阅读量。  </p>
+<p>一个学习的心态，要不停的去了解新的东西，要不断更新你现在的知识。 </p>
+<p>对项目有要求，让项目造就你能力的提升。    </p>
+<p>找一个好的能解决技术问题的人，这样提升会快一点。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/19/2015-04-19-D-day技术分享沙龙整理/" data-id="ci8vkp8290000ai0kmj47g6f3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Mysql之Mac下卸载大法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/04/Mysql之Mac下卸载大法/" class="article-date">
+  <time datetime="2015-04-04T10:24:28.000Z" itemprop="datePublished">2015-04-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/04/Mysql之Mac下卸载大法/">Mysql之Mac下卸载大法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于自己电脑上的MySQL数据库总是出现各种奇怪的问题，虽然我不喜欢卢总的那种“重装”style，但是苦于解决各种奇葩问题，所以我也重装了MySQL~但是不像在Windows下，Mac下是没有卸载文件的，因此得自己手动卸载~很多小伙伴由于没有卸载完全，重新安装并启动的时候会出现各种新的问题，因此，在这里附上完整版的写在方法~O(∩_∩)O</p>
+<ul>
+<li>sudo rm /usr/local/mysql</li>
+<li>sudo rm -rf /usr/local/mysql*</li>
+<li>sudo rm -rf /Library/StartupItems/MySQLCOM</li>
+<li>sudo rm -rf /Library/PreferencePanes/My*</li>
+<li>vim /etc/hostconfig and removed the line MYSQLCOM=-YES-</li>
+<li>rm -rf ~/Library/PreferencePanes/My*</li>
+<li>sudo rm -rf /Library/Receipts/mysql*</li>
+<li>sudo rm -rf /Library/Receipts/MySQL*</li>
+<li>sudo rm -rf /var/db/receipts/com.mysql.*  （勿忘）</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/04/Mysql之Mac下卸载大法/" data-id="ci8vkp8300005ai0k0vs26xv9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-编码之MySQL数据库编码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/03/30/编码之MySQL数据库编码/" class="article-date">
+  <time datetime="2015-03-30T14:24:28.000Z" itemprop="datePublished">2015-03-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;今天学弟问了我一个乱码的问题，后来发现是他数据库的编码没有设置合理的原因。其实关于编码问题，不论你是搞开发还是搞安全的，都是一个很令人头疼的问题（尤其是我前段时间看了淘宝君山的分享后，感触更深），今天就写一下在Mac和Windows下分别如何修改MySQL的编码~</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;启动MySQL后，输入SHOW VARIABLES LIKE ‘character<em>set</em>%’; 后，会看到如下图所示的相关内容<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="http://7xi5yl.com1.z0.glb.clouddn.com/MySQL1.png" alt=""></p>
+<p>先来解释下各是什么意思~</p>
+<ol>
+<li>character_ set_client   客户端输入字符集（终端）</li>
+<li>character_ set_connection   连接字符集</li>
+<li>character_ set_database    建立数据库默认字符集</li>
+<li>character_ set_results   结果字符集</li>
+<li>character_ set_server    服务器字符集</li>
+<li>character_ set_system  系统字符集</li>
+</ol>
+<h3 id="Windows下">Windows下</h3><p>&nbsp;&nbsp;在mysql配置文件 my.ini下 </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://7xi5yl.com1.z0.glb.clouddn.com/MySQL2.png" alt=""></p>
+<p>  【mysqld】下方character-set-server是用来控制服务器相关字符集（character<em> set_system、character</em> set<em>server 、character</em> set_database ）</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://7xi5yl.com1.z0.glb.clouddn.com/MySQL3.png" alt=""></p>
+<p>  【mysqld】下方default-character-set决定客户端相关的三个字符集（ character<em> set_client 、character</em> set<em>connection、character</em> set_results）</p>
+<p>  修改成自己想要改的编码即可</p>
+<h3 id="Mac下">Mac下</h3><ol>
+<li>拷贝/usr/local/mysql/support-files下的my-default.cnf文件到/etc/my.cnf；</li>
+<li>在my.cnf文件的［client］后面添加一句default-character-set=utf8；</li>
+<li>在my.cnf文件的［mysqld］后面添加default-storage-engine=INNODB<br>&amp;nbsp&amp;nbsp character-set-server=utf8，（网上很多方法都要加上collation-server=utf8_general_ci；但是加了之后，可能无法启动，具体看个人情况）可以参考如下截图</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="http://7xi5yl.com1.z0.glb.clouddn.com/MySQL5.png" alt=""></p>
+<p> 4.保存退出并重启，结果如下图：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/MySQL4.png" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/03/30/编码之MySQL数据库编码/" data-id="ci8vkp82v0002ai0kc5zlmy3s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-多态" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/28/多态/" class="article-date">
+  <time datetime="2015-02-28T14:23:48.000Z" itemprop="datePublished">2015-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/28/多态/">多态</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>多态，就是指一个引用(类型)在不同情况下的多种状态。也可以理解成：多态是指通过指向父类的指针，来调用在不同子类中实现的方法。</p>
+<p>实现多态有两种方式：1、继承；2、接口</p>
+<pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="comment">//非多态演示</span>
+        Cat cat=<span class="keyword">new</span> Cat();
+        cat.cry();
+        Dog dog=<span class="keyword">new</span> Dog();
+        dog.cry();
+        <span class="comment">//多态演示</span>
+        Animal an=<span class="keyword">new</span> Cat();
+        an.cry();
+        an=<span class="keyword">new</span> Dog();
+        an.cry();
+    }
+}
+<span class="comment">//动物类</span>
+<span class="keyword">class</span> <span class="title">Animal</span>{
+    String name;
+    <span class="keyword">int</span> age;
+    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>{
+        <span class="keyword">this</span>.name = name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> age;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>{
+        <span class="keyword">this</span>.age = age;
+    }
+    <span class="comment">//动物会叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"不知道怎么叫"</span>);
+    }
+}
+<span class="comment">//创建Dog子类并继承Animal父类及覆盖cry方法</span>
+<span class="keyword">class</span> <span class="title">Dog</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//狗叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"汪汪叫"</span>);
+    }
+}
+<span class="keyword">class</span> <span class="title">Cat</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//猫自己叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"猫猫叫"</span>);
+    }
+}
+
+
+多重多态演示
+<span class="comment">//演示子类继承父类、方法覆盖、多态方法</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo123</span> {
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="comment">//非多态演示</span>
+        System.<span class="keyword">out</span>.println(<span class="string">"非多态演示:"</span>);
+        Cat cat=<span class="keyword">new</span> Cat();
+        cat.cry();
+        Dog dog=<span class="keyword">new</span> Dog();
+        dog.cry();
+        System.<span class="keyword">out</span>.println();        
+        <span class="comment">//多态演示</span>
+        System.<span class="keyword">out</span>.println(<span class="string">"多态演示:"</span>);
+        Animal an=<span class="keyword">new</span> Cat();
+        an.cry();
+        an=<span class="keyword">new</span> Dog();
+        an.cry();
+        System.<span class="keyword">out</span>.println();    
+        <span class="comment">//多重多态演示</span>
+        System.<span class="keyword">out</span>.println(<span class="string">"多重多态演示:"</span>);
+        Master master=<span class="keyword">new</span> Master();
+        master.feed(<span class="keyword">new</span> Dog(),<span class="keyword">new</span> Bone());
+        master.feed(<span class="keyword">new</span> Cat(),<span class="keyword">new</span> Fish());
+    }
+}
+<span class="comment">//主人类</span>
+<span class="keyword">class</span> <span class="title">Master</span>{
+    <span class="comment">//给动物喂食物，使用多态，只要写一个方法</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">feed</span><span class="params">(Animal an,Food f)</span></span>{
+        an.eat();
+        f.showName();
+    }
+}
+<span class="comment">//食物父类</span>
+<span class="keyword">class</span> <span class="title">Food</span>{
+    String name;
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"食物"</span>);
+    }
+}
+<span class="comment">//食物鱼子类</span>
+<span class="keyword">class</span> <span class="title">Fish</span> <span class="title">extends</span> <span class="title">Food</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"鱼"</span>);
+    }
+}
+<span class="comment">//食物骨头子类</span>
+<span class="keyword">class</span> <span class="title">Bone</span> <span class="title">extends</span> <span class="title">Food</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"骨头"</span>);
+    }
+}
+<span class="comment">//动物类Animal父类</span>
+<span class="keyword">class</span> <span class="title">Animal</span>{
+    String name;
+    <span class="keyword">int</span> age;
+
+    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>{
+        <span class="keyword">this</span>.name = name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> age;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>{
+        <span class="keyword">this</span>.age = age;
+    }
+    <span class="comment">//动物会叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"不知道怎么叫"</span>);
+    }
+    <span class="comment">//动物吃东西</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"不知道吃什么"</span>);
+    }
+}
+<span class="comment">//创建Dog子类并extends继承Animal父类及覆盖cry方法</span>
+<span class="keyword">class</span> <span class="title">Dog</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//狗叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"汪汪叫"</span>);
+    }
+    <span class="comment">//狗吃东西</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"狗爱吃骨头"</span>);
+    }
+}
+<span class="keyword">class</span> <span class="title">Cat</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//猫自己叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"猫猫叫"</span>);
+    }
+    <span class="comment">//猫吃东西</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"猫爱吃鱼"</span>);
+    }
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/28/多态/" data-id="ci8vkp82x0003ai0kojo8f6cu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-内存溢出解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/13/内存溢出解决方法/" class="article-date">
+  <time datetime="2015-02-13T14:00:41.000Z" itemprop="datePublished">2015-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/13/内存溢出解决方法/">内存溢出解决方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天在myeclipse中导入了一个他人的项目，结果报了一个错误：java.lang.OutOfMemoryError: PermGen space，也就是内存溢出。</p>
+<p>导致原因： PermGen space的全称是Permanent Generation space,是指内存的永久保存区域, 这块内存主要是被JVM存放Class和Meta信息的,Class在被Loader时就会被放到PermGen space中, 它和存放类实例(Instance)的Heap区域不同,GC(Garbage Collection)不会在主程序运行期对 PermGen space进行清理，所以如果你的应用中有很多CLASS的话,就很可能出现PermGen space错误, 这种错误常见在web服务器对JSP进行pre compile的时候。如果你的WEB APP下都用了大量的第三方jar, 其大小超过了jvm默认的大小(4M)那么就会产生此错误信息了。</p>
+<p>解决方法： 手动设置MaxPermSize大小修改TOMCAT_HOME/bin/catalina.sh 在“echo “Using CATALINA_BASE: $CATALINA_BASE””上面加入以下行： JAVA_OPTS=”-server -XX:PermSize=64M -XX:MaxPermSize=128m </p>
+<p> 建议：将相同的第三方jar文件移置到tomcat/shared/lib目录下，这样可以达到减少jar 文档重复占用内存的目的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/13/内存溢出解决方法/" data-id="ci8vkp82y0004ai0kja18fv33" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java之重载和覆盖" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/09/Java之重载和覆盖/" class="article-date">
+  <time datetime="2015-02-09T14:15:43.000Z" itemprop="datePublished">2015-02-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/09/Java之重载和覆盖/">Java之重载和覆盖</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="方法重载">方法重载</h2><h3 id="重载的概念">重载的概念</h3><p>在类的同一种功能的多种实现方式，到底采用哪种方式，取决于调用者给出的参数。</p>
+<p>注：</p>
+<ol>
+<li>方法名相同</li>
+<li>方法的参数类型，个数，顺序至少有一项不同</li>
+<li>方法返回类型可以不同(只是返回类型不一样，不能构成重载)</li>
+<li>方法的修饰符可以不同(只是控制访问修饰符不同，不能构成重载)</li>
+</ol>
+<p>请编写一个类(Abc)，编写方法可以接收两个整数，返回两个数中较大的数</p>
+<pre><code>//方法重载(overload)getMax
+<span class="keyword">public</span> <span class="keyword">class</span> Demo{
+    <span class="keyword">public</span> static void main(String []args){
+        Abc2 abc1=new Abc2();
+        System.<span class="type">out</span>.println(abc1.getMax(<span class="number">12</span>,<span class="number">14</span>));
+        System.<span class="type">out</span>.println(abc1.getMax(4f,0f));
+    }
+}
+
+<span class="keyword">class</span> Abc2{
+    //返回较大的整数
+    <span class="keyword">public</span> <span class="built_in">int</span> getMax(<span class="built_in">int</span> i,<span class="built_in">int</span> j){
+        <span class="keyword">if</span>(i&gt;j){
+            <span class="keyword">return</span> i;
+        }<span class="keyword">else</span>{
+            <span class="keyword">return</span> j;
+         }
+    }
+    <span class="keyword">public</span> <span class="built_in">float</span> getMax(<span class="built_in">float</span> a,<span class="built_in">float</span> b){
+        <span class="keyword">if</span>(a&gt;b){
+            <span class="keyword">return</span> a;
+        }<span class="keyword">else</span>{
+            <span class="keyword">return</span> b;
+         }
+    }
+    //如果只是返回类型不一样，能否构成重载？不能够构成重载
+/*    <span class="keyword">public</span> <span class="type">double</span> getMax(<span class="built_in">float</span> d,<span class="type">double</span> c){
+        <span class="keyword">if</span>(c&gt;d){
+            <span class="keyword">return</span> c;
+        }<span class="keyword">else</span>{
+            <span class="keyword">return</span> d;
+         }
+    }
+    //如果只是控制访问修饰符不同，能否构成重载？不能够构成重载
+    <span class="keyword">protected</span> <span class="built_in">float</span> getMax(<span class="built_in">float</span> c,<span class="built_in">float</span> d){
+        <span class="keyword">if</span>(c&gt;d){
+            <span class="keyword">return</span> c;
+        }<span class="keyword">else</span>{
+            <span class="keyword">return</span> d;
+         }
+    }*/
+}
+</code></pre><h2 id="方法覆盖">方法覆盖</h2><h3 id="覆盖的概念">覆盖的概念</h3><p>子类有一个方法，和父类的某个方法的名称、返回类型、参数一样，那么我们就说子类的这个方法覆盖了父类的那个方法。</p>
+<p>注：</p>
+<ol>
+<li>子类的方法的返回类型，参数，方法名称，要和父类的返回类型，参数，方法名称完全一样，否则编译出错。</li>
+<li>子类方法不能缩小父类方法的访问权限。</li>
+</ol>
+<pre><code><span class="comment">//子类方法覆盖父类方法</span>
+public <span class="class"><span class="keyword">class</span> <span class="title">Demo120</span>{</span>
+    public static void main(<span class="type">String</span> []args){
+        <span class="comment">//创建一只猫</span>
+        <span class="type">Cat</span> cat1=<span class="keyword">new</span> <span class="type">Cat</span>();
+            cat1.cry();
+        <span class="type">Dog</span> dog1=<span class="keyword">new</span> <span class="type">Dog</span>();
+            dog1.cry();
+    }
+}
+<span class="comment">//动物类</span>
+<span class="class"><span class="keyword">class</span> <span class="title">Animal</span>{</span>
+    int age;
+    <span class="type">String</span> name;
+    <span class="comment">//都会叫</span>
+    public void cry(){
+        <span class="type">System</span>.out.println(<span class="string">"我是动物，不知道怎么叫"</span>);
+    }
+
+}
+<span class="comment">//猫猫类</span>
+<span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">Animal</span>{</span>
+    <span class="comment">//覆盖父类方法</span>
+    public void cry(){
+        <span class="type">System</span>.out.println(<span class="string">"猫猫叫!"</span>);
+    }
+}
+<span class="comment">//狗狗类</span>
+<span class="class"><span class="keyword">class</span> <span class="title">Dog</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">Animal</span>{</span>
+    <span class="comment">//覆盖父类方法</span>
+    public void cry(){
+        <span class="type">System</span>.out.println(<span class="string">"汪汪叫!"</span>);
+    }
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/09/Java之重载和覆盖/" data-id="ci8vkp8320006ai0ky2au76ry" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-项目开发流程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/30/项目开发流程/" class="article-date">
+  <time datetime="2015-01-30T01:22:54.000Z" itemprop="datePublished">2015-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/30/项目开发流程/">项目开发流程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨晚听了一节在线公开课，主讲老师有8年在腾讯的开发经验，他和我们分享了一个大型Java项目的开发流程，我整理了一下:</p>
+<ol>
+<li>新建Javaweb项目；</li>
+<li>建立静态页面；</li>
+<li>编写后台的业务逻辑；</li>
+<li>连接数据库（打通前后台），实现动态化；</li>
+<li>大数据处理，安全化、性能优化；</li>
+<li>测试：内侧（黑盒&lt;功能性测试&gt;，白盒&lt;代码&gt;）、公测（目标用户参与测试）；</li>
+<li>试运营（找bug）；</li>
+<li>正式上线运营，根据需求、市场，“小步快跑、快速迭代”改版；</li>
+<li>维护。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/30/项目开发流程/" data-id="ci8vkp82r0001ai0ktd9gvuv4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Java之封装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/25/Java之封装/" class="article-date">
+  <time datetime="2015-01-25T14:46:36.000Z" itemprop="datePublished">2015-01-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/25/Java之封装/">Java之封装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="什么是封装">什么是封装</h2><p>封装就是把抽象出来的数据和对数据的操作封装在一起，数据被保护在内部，程序的其它部分只有通过被授权的操作(成员方法)，才能对数据进行操作。对于封装而言，一个对象它所封装的是自己的属性和方法，所以它是不需要依赖其他对象就可以完成自己的操作。</p>
+<p>使用封装有三大好处：</p>
+<ol>
+<li>良好的封装能够减少耦合。</li>
+<li>类内部的结构可以自由修改。</li>
+<li>可以对成员进行更精确的控制。</li>
+<li>隐藏信息，实现细节。</li>
+</ol>
+<pre><code>    <span class="comment">//封装案例</span>
+    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
+        <span class="comment">//创建一个职员</span>
+        Clerk clerk1=<span class="keyword">new</span> Clerk(<span class="string">"小花"</span>,<span class="number">24</span>,<span class="number">4567.6</span>f);
+        System.<span class="keyword">out</span>.println(<span class="string">"名字是"</span>+clerk1.name+<span class="string">"薪水"</span>+clerk1.getSal());
+    }
+    }
+    <span class="comment">//职员</span>
+    <span class="keyword">class</span> <span class="title">Clerk</span>{
+        <span class="keyword">public</span> String name;
+        <span class="comment">//private私有的，public公有的</span>
+        <span class="keyword">private</span> <span class="keyword">int</span> age;
+        <span class="keyword">private</span> <span class="keyword">float</span> salary;
+
+    <span class="function"><span class="keyword">public</span> <span class="title">Clerk</span><span class="params">(String name,<span class="keyword">int</span> age,<span class="keyword">float</span> sal)</span></span>{
+        <span class="keyword">this</span>.name=name;
+        <span class="keyword">this</span>.age=age;
+        <span class="keyword">this</span>.salary=sal;
+    }
+    <span class="comment">//通过一个成员方法去控制和访问私有的属性</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getSal</span><span class="params">()</span></span>{
+        <span class="keyword">return</span> <span class="keyword">this</span>.salary;
+    }
+}
+</code></pre><h2 id="封装—访问控制修饰符">封装—访问控制修饰符</h2><h3 id="java提供四种访问控制修饰符号控制方法和变量的访问权限：">java提供四种访问控制修饰符号控制方法和变量的访问权限：</h3><ol>
+<li>公开级别：用public修饰，对外公开</li>
+<li>受保护级别：用protected修饰，对子类和同一个包中的类公开</li>
+<li>默认级别：没有修饰符号，向同一个包的类公开</li>
+<li>私有级别：用private修饰，只有类本身可以访问，不对外公开</li>
+</ol>
+<h2 id="引入包的概念">引入包的概念</h2><h3 id="必要性">必要性</h3><p>现在有两个程序员共同开发一个java项目，程序员A希望定义一个类取名Dog，程序员B也想定义一个类也叫Dog。两个程序员为此还吵了起来，怎么办？</p>
+<h3 id="包—三大作用">包—三大作用</h3><ol>
+<li>区分相同名字的类</li>
+<li>当类很多时，可以很好的管理类</li>
+<li>控制访问范围</li>
+</ol>
+<h3 id="包—命名规范">包—命名规范</h3><p>小写字母  比如 com.nuist.kw</p>
+<h3 id="包—常用的包">包—常用的包</h3><p>一个包下，包含很多的类，java中常用的包有：</p>
+<ul>
+<li>java.lang.* 包    自动引入    </li>
+<li>java.util.* 工具包</li>
+<li>java.net.* 包    网络开发包    </li>
+<li>java.awt.* 包 窗口工具包</li>
+</ul>
+<h3 id="包—如何引入包">包—如何引入包</h3><pre><code>语法：<span class="preprocessor"><span class="keyword">import</span> 包;</span>    
+比如<span class="preprocessor"><span class="keyword">import</span> java.awt.*;</span>
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/25/Java之封装/" data-id="ci8vkp83c000bai0k9x3qyuct" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/04/23/2015-04-23-xinjian/">xinjian</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/19/2015-04-19-浅析Http/">浅析Http</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/">D-day技术分享沙龙整理</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/04/Mysql之Mac下卸载大法/">Mysql之Mac下卸载大法</a>
+          </li>
+        
+          <li>
+            <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 KongWell<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
