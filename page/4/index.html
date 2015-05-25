@@ -3,41 +3,17 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Java之类变量、类方法 | xiaoheihei&#39;s Blog</title>
+  <title>xiaoheihei&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="类变量什么是类变量？类变量是该类的所有对象共享的变量，任何一个该类的对象去访问它时，取到的都是相同的值，同样任何一个该类的对象去修改它时，修改的也是同一个变量。
-如何定义类变量？定义语法：
-    访问修饰符 static 数据类型 变量名;
-
-如何访问类变量？
-    类名.类变量名  或者  对象名.类变量名
-
-public class Demo{
-    static int i=1;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Java之类变量、类方法">
-<meta property="og:url" content="http://yoursite.com/2015/01/22/Java之类变量、类方法/index.html">
+  <meta name="description" content="Technology is Art">
+<meta property="og:type" content="website">
+<meta property="og:title" content="xiaoheihei's Blog">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
 <meta property="og:site_name" content="xiaoheihei's Blog">
-<meta property="og:description" content="类变量什么是类变量？类变量是该类的所有对象共享的变量，任何一个该类的对象去访问它时，取到的都是相同的值，同样任何一个该类的对象去修改它时，修改的也是同一个变量。
-如何定义类变量？定义语法：
-    访问修饰符 static 数据类型 变量名;
-
-如何访问类变量？
-    类名.类变量名  或者  对象名.类变量名
-
-public class Demo{
-    static int i=1;">
+<meta property="og:description" content="Technology is Art">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java之类变量、类方法">
-<meta name="twitter:description" content="类变量什么是类变量？类变量是该类的所有对象共享的变量，任何一个该类的对象去访问它时，取到的都是相同的值，同样任何一个该类的对象去修改它时，修改的也是同一个变量。
-如何定义类变量？定义语法：
-    访问修饰符 static 数据类型 变量名;
-
-如何访问类变量？
-    类名.类变量名  或者  对象名.类变量名
-
-public class Demo{
-    static int i=1;">
+<meta name="twitter:title" content="xiaoheihei's Blog">
+<meta name="twitter:description" content="Technology is Art">
   
     <link rel="alternative" href="/atom.xml" title="xiaoheihei&#39;s Blog" type="application/atom+xml">
   
@@ -87,7 +63,9 @@ public class Demo{
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Java之类变量、类方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-Java之类变量、类方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/22/Java之类变量、类方法/" class="article-date">
   <time datetime="2015-01-22T09:46:50.000Z" itemprop="datePublished">2015-01-22</time>
@@ -100,8 +78,8 @@ public class Demo{
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Java之类变量、类方法
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/22/Java之类变量、类方法/">Java之类变量、类方法</a>
     </h1>
   
 
@@ -187,29 +165,185 @@ public class Demo{
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2015/01/25/Java之封装/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Java之封装
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2015/01/20/Java之this/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Java之this</div>
-    </a>
-  
-</nav>
+</article>
 
+
+  
+    <article id="post-Java之this" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/20/Java之this/" class="article-date">
+  <time datetime="2015-01-20T13:17:24.000Z" itemprop="datePublished">2015-01-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/20/Java之this/">Java之this</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>java虚拟机会给每个对象分配<span class="keyword">this</span>,代表当前对象。
+</code></pre><p>注意：</p>
+<ol>
+<li>this是属于一个对象，不属于类的。</li>
+<li>this不能在类定义的外部使用，只能在类定义的方法中使用</li>
+</ol>
+<pre><code><span class="comment">/*
+    this的必要性
+*/</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
+        Dog dog1=<span class="keyword">new</span> Dog(<span class="number">2</span>,<span class="string">"大黄"</span>);
+            Person p1=<span class="keyword">new</span> Person(dog1,<span class="number">23</span>,<span class="string">"郭德纲"</span>);
+            Person p2=<span class="keyword">new</span> Person(dog1,<span class="number">24</span>,<span class="string">"刘谦"</span>);
+        p1.showInfo();    
+    p1.dog.showInfo();
+    }
+}
+<span class="comment">//定义一个人类</span>
+<span class="keyword">class</span> <span class="title">Person</span>{
+    <span class="comment">//成员变量</span>
+    <span class="keyword">int</span> age;
+    String name;
+    Dog dog;<span class="comment">//引用类型</span>
+    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(Dog dog,<span class="keyword">int</span> age,String name)</span></span>{
+        <span class="comment">//可读性不好</span>
+        <span class="comment">//age=age;</span>
+        <span class="comment">//name=name;</span>
+        <span class="keyword">this</span>.age=age; <span class="comment">//this.age指this代词指定是成员变量age</span>
+        <span class="keyword">this</span>.name=name; <span class="comment">//this.name指this代词指定是成员变量name</span>
+        <span class="keyword">this</span>.dog=dog;
+    }
+<span class="comment">//显示人名字</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"人名是："</span>+<span class="keyword">this</span>.name);
+        }
+    }
+
+<span class="keyword">class</span> <span class="title">Dog</span>{
+    <span class="keyword">int</span> age;
+    String name;
+    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(<span class="keyword">int</span> age,String name)</span></span>{
+        <span class="keyword">this</span>.age=age;
+        <span class="keyword">this</span>.name=name;
+    }
+    <span class="comment">//显示狗名</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"狗名叫"</span>+<span class="keyword">this</span>.name);
+    }
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/20/Java之this/" data-id="cia3grm1s000ebakru4oxkcnj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
   
 </article>
 
+
+  
+    <article id="post-Java之构造方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/20/Java之构造方法/" class="article-date">
+  <time datetime="2015-01-20T12:26:27.000Z" itemprop="datePublished">2015-01-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/20/Java之构造方法/">Java之构造方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="类的构造方法介绍">类的构造方法介绍</h2><p>什么是构造方法呢？在回答这个问题之前，我们来看一个需求：我们在创建人类的对象时，是先把一个对象创建好后，再给他的年龄和姓名属性赋值，如果现在我要求，在创建人类的对象时，就直接指定这个对象的年龄和姓名，该怎么做？</p>
+<p>你可以在定义类的时候，定义一个构造方法即可。</p>
+<p>构造方法是类的一种特殊的方法，它的主要作用是完成对新对象的初始化。它有几个特点：</p>
+<ol>
+<li>方法名和类名相同</li>
+<li>没有返回值</li>
+<li>在创建一个类的新对象时，系统会自动的调用该类的构造方法完成对新对象的初始化。</li>
+</ol>
+<p>特别说明：一个类可以定义多个不同的构造方法。</p>
+<pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
+    Person p1=<span class="keyword">new</span> Person(<span class="number">12</span>,<span class="string">"顺平"</span>);<span class="comment">//给予不同的初始值，调用的构造方法不同，构造方法虽同名，但系统会根据初始值来选定构造方法。</span>
+    }
+}
+<span class="comment">//定义一个人类</span>
+<span class="keyword">class</span> <span class="title">Person</span>{
+    <span class="keyword">int</span> age;
+    String name;
+    <span class="comment">//默认构造方法</span>
+    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">()</span></span>{
+    }
+<span class="comment">//构造方法的主要用处是：初始化你的成员属性(变量)</span>
+<span class="comment">//构造方法</span>
+<span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> age,String name)</span></span>{
+    System.<span class="keyword">out</span>.println(<span class="string">"我是构造1"</span>);
+    <span class="keyword">this</span>.age=age;
+    <span class="keyword">this</span>.name=name;
+}
+<span class="comment">//构造方法2</span>
+    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name)</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"我是构造2"</span>);
+        <span class="keyword">this</span>.name=name;
+    }
+}
+</code></pre><h2 id="类的默认构造方法">类的默认构造方法</h2><p>有些小伙伴可能会问？亲，我们在没有学习构造函数前不是也可以创建对象吗？<br>是这样的，如果程序员没有定义构造方法，系统会自动生成一个默认构造方法。比如Person类</p>
+<pre><code><span class="tag">Person</span> (){
+};
+</code></pre><p>当创建一个Person对象时</p>
+<pre><code><span class="type">Person</span> per1=<span class="keyword">new</span> <span class="type">Person</span><span class="literal">()</span>;
+</code></pre><p>默认的构造函数就会被自动调用。</p>
+<h2 id="类的构造方法小结：">类的构造方法小结：</h2><ol>
+<li>构造方法名和类名相同；</li>
+<li>构造方法没有返回值；</li>
+<li>主要作用是完成对新对象的初始化；</li>
+<li>在创建新对象时，系统自动的调用该类的构造方法；</li>
+<li>一个类可以有多个构造方法；</li>
+<li>每个类都有一个默认的构造方法。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/20/Java之构造方法/" data-id="cia3grm1f0009bakr8ya8881p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+  
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/page/3/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/5/">Next &raquo;</a>
+    </nav>
+  
 </section>
         
           <aside id="sidebar">
