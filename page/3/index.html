@@ -65,6 +65,46 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-内存溢出解决方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/13/内存溢出解决方法/" class="article-date">
+  <time datetime="2015-02-13T14:00:41.000Z" itemprop="datePublished">2015-02-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/13/内存溢出解决方法/">内存溢出解决方法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天在myeclipse中导入了一个他人的项目，结果报了一个错误：java.lang.OutOfMemoryError: PermGen space，也就是内存溢出。</p>
+<p>导致原因： PermGen space的全称是Permanent Generation space,是指内存的永久保存区域, 这块内存主要是被JVM存放Class和Meta信息的,Class在被Loader时就会被放到PermGen space中, 它和存放类实例(Instance)的Heap区域不同,GC(Garbage Collection)不会在主程序运行期对 PermGen space进行清理，所以如果你的应用中有很多CLASS的话,就很可能出现PermGen space错误, 这种错误常见在web服务器对JSP进行pre compile的时候。如果你的WEB APP下都用了大量的第三方jar, 其大小超过了jvm默认的大小(4M)那么就会产生此错误信息了。</p>
+<p>解决方法： 手动设置MaxPermSize大小修改TOMCAT_HOME/bin/catalina.sh 在“echo “Using CATALINA_BASE: $CATALINA_BASE””上面加入以下行： JAVA_OPTS=”-server -XX:PermSize=64M -XX:MaxPermSize=128m </p>
+<p> 建议：将相同的第三方jar文件移置到tomcat/shared/lib目录下，这样可以达到减少jar 文档重复占用内存的目的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/13/内存溢出解决方法/" data-id="cicg8ver40004xq0kz52k5mqm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Java之重载和覆盖" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/02/09/Java之重载和覆盖/" class="article-date">
@@ -182,7 +222,7 @@ public <span class="class"><span class="keyword">class</span> <span class="title
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/09/Java之重载和覆盖/" data-id="cia3m9gl10006nrkr2f3c448h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/02/09/Java之重载和覆盖/" data-id="cicg8ver80006xq0kf2gzongu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,98 +270,7 @@ public <span class="class"><span class="keyword">class</span> <span class="title
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/30/项目开发流程/" data-id="cia3m9gkr0001nrkreof9q0x1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Java之封装" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/25/Java之封装/" class="article-date">
-  <time datetime="2015-01-25T14:46:36.000Z" itemprop="datePublished">2015-01-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/25/Java之封装/">Java之封装</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="什么是封装">什么是封装</h2><p>封装就是把抽象出来的数据和对数据的操作封装在一起，数据被保护在内部，程序的其它部分只有通过被授权的操作(成员方法)，才能对数据进行操作。对于封装而言，一个对象它所封装的是自己的属性和方法，所以它是不需要依赖其他对象就可以完成自己的操作。</p>
-<p>使用封装有三大好处：</p>
-<ol>
-<li>良好的封装能够减少耦合。</li>
-<li>类内部的结构可以自由修改。</li>
-<li>可以对成员进行更精确的控制。</li>
-<li>隐藏信息，实现细节。</li>
-</ol>
-<pre><code>    <span class="comment">//封装案例</span>
-    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
-        <span class="comment">//创建一个职员</span>
-        Clerk clerk1=<span class="keyword">new</span> Clerk(<span class="string">"小花"</span>,<span class="number">24</span>,<span class="number">4567.6</span>f);
-        System.<span class="keyword">out</span>.println(<span class="string">"名字是"</span>+clerk1.name+<span class="string">"薪水"</span>+clerk1.getSal());
-    }
-    }
-    <span class="comment">//职员</span>
-    <span class="keyword">class</span> <span class="title">Clerk</span>{
-        <span class="keyword">public</span> String name;
-        <span class="comment">//private私有的，public公有的</span>
-        <span class="keyword">private</span> <span class="keyword">int</span> age;
-        <span class="keyword">private</span> <span class="keyword">float</span> salary;
-
-    <span class="function"><span class="keyword">public</span> <span class="title">Clerk</span><span class="params">(String name,<span class="keyword">int</span> age,<span class="keyword">float</span> sal)</span></span>{
-        <span class="keyword">this</span>.name=name;
-        <span class="keyword">this</span>.age=age;
-        <span class="keyword">this</span>.salary=sal;
-    }
-    <span class="comment">//通过一个成员方法去控制和访问私有的属性</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">float</span> <span class="title">getSal</span><span class="params">()</span></span>{
-        <span class="keyword">return</span> <span class="keyword">this</span>.salary;
-    }
-}
-</code></pre><h2 id="封装—访问控制修饰符">封装—访问控制修饰符</h2><h3 id="java提供四种访问控制修饰符号控制方法和变量的访问权限：">java提供四种访问控制修饰符号控制方法和变量的访问权限：</h3><ol>
-<li>公开级别：用public修饰，对外公开</li>
-<li>受保护级别：用protected修饰，对子类和同一个包中的类公开</li>
-<li>默认级别：没有修饰符号，向同一个包的类公开</li>
-<li>私有级别：用private修饰，只有类本身可以访问，不对外公开</li>
-</ol>
-<h2 id="引入包的概念">引入包的概念</h2><h3 id="必要性">必要性</h3><p>现在有两个程序员共同开发一个java项目，程序员A希望定义一个类取名Dog，程序员B也想定义一个类也叫Dog。两个程序员为此还吵了起来，怎么办？</p>
-<h3 id="包—三大作用">包—三大作用</h3><ol>
-<li>区分相同名字的类</li>
-<li>当类很多时，可以很好的管理类</li>
-<li>控制访问范围</li>
-</ol>
-<h3 id="包—命名规范">包—命名规范</h3><p>小写字母  比如 com.nuist.kw</p>
-<h3 id="包—常用的包">包—常用的包</h3><p>一个包下，包含很多的类，java中常用的包有：</p>
-<ul>
-<li>java.lang.* 包    自动引入    </li>
-<li>java.util.* 工具包</li>
-<li>java.net.* 包    网络开发包    </li>
-<li>java.awt.* 包 窗口工具包</li>
-</ul>
-<h3 id="包—如何引入包">包—如何引入包</h3><pre><code>语法：<span class="preprocessor"><span class="keyword">import</span> 包;</span>    
-比如<span class="preprocessor"><span class="keyword">import</span> java.awt.*;</span>
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/25/Java之封装/" data-id="cia3m9glb000bnrkrj11isguh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/30/项目开发流程/" data-id="cicg8veqx0001xq0kj1nd79op" class="article-share-link">Share</a>
       
       
     </footer>
@@ -350,7 +299,7 @@ public <span class="class"><span class="keyword">class</span> <span class="title
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -360,6 +309,10 @@ public <span class="class"><span class="keyword">class</span> <span class="title
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/07/23/Java中的注解/">Java中的注解</a>
+          </li>
         
           <li>
             <a href="/2015/04/19/2015-04-19-浅析Http/">浅析Http</a>
@@ -375,10 +328,6 @@ public <span class="class"><span class="keyword">class</span> <span class="title
         
           <li>
             <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
-          </li>
-        
-          <li>
-            <a href="/2015/02/28/多态/">多态</a>
           </li>
         
       </ul>

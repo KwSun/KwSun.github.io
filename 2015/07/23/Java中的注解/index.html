@@ -3,17 +3,53 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xiaoheihei&#39;s Blog</title>
+  <title>Java中的注解 | xiaoheihei&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Technology is Art">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xiaoheihei's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Java中的注解注解的好处
+读懂他人代码，特别是框架相关的代码
+让编程简洁，代码清晰
+
+概念
+Java提供的一种源程序中的元素关联人和信息和任何元数据的途径和方法
+
+Java中的常见注解
+@Override: 限定重写父类方法, 该注解只能用于方法
+@Deprecated: 用于表示某个程序元素(类, 方法等)已过时
+@SuppressWarnings: 抑制编译器警告. 
+
+常见第三方注解Spr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java中的注解">
+<meta property="og:url" content="http://yoursite.com/2015/07/23/Java中的注解/index.html">
 <meta property="og:site_name" content="xiaoheihei's Blog">
-<meta property="og:description" content="Technology is Art">
+<meta property="og:description" content="Java中的注解注解的好处
+读懂他人代码，特别是框架相关的代码
+让编程简洁，代码清晰
+
+概念
+Java提供的一种源程序中的元素关联人和信息和任何元数据的途径和方法
+
+Java中的常见注解
+@Override: 限定重写父类方法, 该注解只能用于方法
+@Deprecated: 用于表示某个程序元素(类, 方法等)已过时
+@SuppressWarnings: 抑制编译器警告. 
+
+常见第三方注解Spr">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiaoheihei's Blog">
-<meta name="twitter:description" content="Technology is Art">
+<meta name="twitter:title" content="Java中的注解">
+<meta name="twitter:description" content="Java中的注解注解的好处
+读懂他人代码，特别是框架相关的代码
+让编程简洁，代码清晰
+
+概念
+Java提供的一种源程序中的元素关联人和信息和任何元数据的途径和方法
+
+Java中的常见注解
+@Override: 限定重写父类方法, 该注解只能用于方法
+@Deprecated: 用于表示某个程序元素(类, 方法等)已过时
+@SuppressWarnings: 抑制编译器警告. 
+
+常见第三方注解Spr">
   
     <link rel="alternative" href="/atom.xml" title="xiaoheihei&#39;s Blog" type="application/atom+xml">
   
@@ -63,9 +99,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Java中的注解" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Java中的注解" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/23/Java中的注解/" class="article-date">
   <time datetime="2015-07-23T13:30:52.000Z" itemprop="datePublished">2015-07-23</time>
@@ -78,8 +112,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/23/Java中的注解/">Java中的注解</a>
+    <h1 class="article-title" itemprop="name">
+      Java中的注解
     </h1>
   
 
@@ -204,139 +238,40 @@ public String eyeColor(){
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-2015-04-19-浅析Http" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/19/2015-04-19-浅析Http/" class="article-date">
-  <time datetime="2015-04-19T03:05:43.000Z" itemprop="datePublished">2015-04-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/19/2015-04-19-浅析Http/">浅析Http</a>
-    </h1>
+    <a href="/2015/04/19/2015-04-19-浅析Http/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">浅析Http</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://7xi5yl.com1.z0.glb.clouddn.com/9.png" alt=""><br>昨天的多火课堂分享，小嘿嘿给大家介绍了有关Http的一些东西~</p>
-<p>首先，先看一看Http的历史~主要由3个版本</p>
-<ul>
-<li>Http/0.9&nbsp;&nbsp;&nbsp;&nbsp;已过时</li>
-<li>Http/1.0&nbsp;&nbsp;&nbsp;&nbsp;第一个在通讯中指定版本号的HTTP 协议版本。仍被广泛采用，特别是在代理服务器中。</li>
-<li>Http/1.1&nbsp;&nbsp;&nbsp;&nbsp;当前版本。<br>默认采用持久连接。<br>支持以管道方式同时发送多个请求，降低线路负载，提供传输速度。</li>
-</ul>
-<p>思考，如何不借助浏览器发起有关请求呢？</p>
-<ol>
-<li>通过程序实现处理Http请求的工具包（如HttpClient）；</li>
-<li>curl+URL；</li>
-</ol>
-<p>常用Http请求头：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/1.png" alt=""><br>常用Http响应头：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/2.png" alt=""><br>常用Http状态码：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/3.png" alt=""><br>请求消息头举例：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/4.png" alt=""><br>请求响应头举例：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/6.png" alt=""><br>发出请求的代码举例：</p>
-<p><img src="http://7xi5yl.com1.z0.glb.clouddn.com/7.png" alt=""></p>
-<p>防止盗链代码举例：<img src="http://7xi5yl.com1.z0.glb.clouddn.com/8.png" alt=""><br>最后，向大家推荐2本介绍Http的书：《图解Http》、《Http权威指南》~<br>附：* <a href="http://pan.baidu.com/s/1i3CIjY1" target="_blank" rel="external">《浅析Http协议》</a>-小嘿嘿讲稿</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/19/2015-04-19-浅析Http/" data-id="cicg8veru000gxq0k1ht1mdue" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
 
-  
-    <article id="post-2015-04-19-D-day技术分享沙龙整理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/" class="article-date">
-  <time datetime="2015-04-19T02:59:36.000Z" itemprop="datePublished">2015-04-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/">D-day技术分享沙龙整理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://i2.tietuku.com/259b179bbf3810c1.jpg" alt="">  </p>
-<p>第一次参加<code>SegmentFault</code>组织的活动，收获很大。活动现场氛围特别棒，特别是那个抽奖的页面真的很棒，很想把源码拿过来学习下。唯一的遗憾就是今天没有抽到奖。  </p>
-<h2 id="寸志_前端开发与用户体验">寸志 前端开发与用户体验</h2><p>今天主要是去听<code>Teambition</code>的寸志老师去的，想去听寸志分享前端干货。这次寸志老师分享的主题是《前端开发与用户体验》，以<code>Teambition</code>的产品为例介绍前端技术在改进产品用户体验方面的应用。<br>{<1>}<img src="http://i2.tietuku.com/844766d38380d629.png" alt=""></1></p>
-<p>之前有用过<code>Teambition</code>这个团队协作工具来和后端同学进行合作过。感觉这个产品的用户体验过特别好。今天从寸志老师才得知产品用户体验过好是因为他们老板齐俊元是很重视设计。（果然老板重视设计就是不一样啊！）<br><code>Teambition</code>采用的前端框架是<code>Backbone</code>。之前听说这个前端框架，一个和<code>AngularJs</code>差不多前端<code>MVC</code>前端框架。但是比<code>AngularJs</code>出来早，<code>Teambition</code>团队采用<code>Backbone</code>加上<code>jquery</code>的一些插件来打造无刷新的交互体验。为什么选择<code>Backbone</code>是因为没有双向绑定，只会更新修改的部分，而不会更新其他部分。（对前端js框架还不是很了解，如果有叙述错误还请指正。）但我觉得对于前端工程师个人而言，<code>AngularJs</code>还是很适合我们的，毕竟它帮我们做了太多的事情。自己最近在研究Facebook的React,很想自己用React Native搞个自己的IOS APP出来。  </p>
-<p>自己最近一直在研究<code>HTML5</code>的一些新的JS API，今天寸志介绍他们在自己的产品<code>Teambition</code>中采用HTML5新的<code>Notification</code>API 在用户关闭浏览器的情况下来通知用户新的信息。使用<code>Offline Web Application</code>来离线一些资源，这样在用户断网的情况下同样可以获得很好的体验。自己在最后的圆桌环节同时也向今天的四位分享人提问了在现在的成熟的<code>Web</code>产品中有哪些新的HTML5的特性在产品中有应用。<br>我这里初略整理了一下答案：  </p>
-<ul>
-<li>使用localStorage来储存一些用户的信息，在一些web的应用中会采用indexDB来储存一些数据到本地。</li>
-<li>使用<code>Notification</code>API在用户没有使用浏览器的浏览网站的情况下来通知用户一些信息。</li>
-<li>使用<code>Offline Web Application</code>来离线一些资源，这样让用户特殊情况下没网时也能获得不错的体验!</li>
-<li>使用CSS3的像animation这种新的特性来制作动画效果。</li>
-</ul>
-<p><img src="http://i2.tietuku.com/16547a28f187c0d2.png" alt="">  </p>
-<p>现在网页设计需要考虑多终端，也就是响应式，在分享中寸志老师分享了他们团队优化响应式的经验：  </p>
-<ol>
-<li>他们会先设计手机的版本，然后由手机版本变更到PC版和PAD版本。  </li>
-<li>对于iphone的Retina屏幕他们会把图片的大小做到两倍大小，然后使用CSS来把图片大小缩小到一倍。</li>
-<li>使用CSS单位rem,然后使用js来控制根元素html里面的font-size。<br>此外分享中提及了：</li>
-</ol>
-<ul>
-<li>利用CSS3的动画来制作动画，给用户带来愉悦感。</li>
-<li>使用webfont来代替图片图标</li>
-<li>用<a href="https://github.com/mllrsohn/node-webkit-builder" target="_blank" rel="external">node-webkit</a>来把网页应用分装成单个应用。  </li>
-</ul>
-<h4 id="除了寸志老师的前端分享外之外,分享的嘉宾还有又拍云的张聪，扇贝网，暴走漫画的丁彦。因为自己最熟悉的是前端，对于后端和运维不是特别熟悉，所以这里不谢关于这三位大牛的总结了。">除了寸志老师的前端分享外之外,分享的嘉宾还有又拍云的张聪，扇贝网，暴走漫画的丁彦。因为自己最熟悉的是前端，对于后端和运维不是特别熟悉，所以这里不谢关于这三位大牛的总结了。</h4><p>下面是这三位大牛的演讲文稿:  </p>
-<ul>
-<li><a href="http://pan.baidu.com/s/1hqELDqs" target="_blank" rel="external">《Using ngx_lua in UPYUN》</a>-又拍云的张聪</li>
-<li><a href="http://pan.baidu.com/s/1jGswSiq" target="_blank" rel="external">《Ansible 在云环境中的使用》</a>-扇贝网的吴焱红 </li>
-<li><a href="http://pan.baidu.com/s/1pJzEpx5" target="_blank" rel="external">《暴走漫画数据挖掘从 0 到 1》</a>—暴走漫画的丁彦</li>
-</ul>
-<h3 id="圆桌讨论问答">圆桌讨论问答</h3><h4 id="1-_从一个普通的技术开发，到稍有知名度的开发者，你们觉得最艰难的时段是哪个时段？">1. 从一个普通的技术开发，到稍有知名度的开发者，你们觉得最艰难的时段是哪个时段？</h4><p>入门阶段，会受打击，但要端正心态。  </p>
-<p>每个人做的选择不一样，有很多路，没有哪一条是对的，要选择一条最合适你的。  </p>
-<p>技术面要广，多关注，多接触。  </p>
-<p>订阅技术博客，每天度技术文章，提高自己阅读量。  </p>
-<p>一个学习的心态，要不停的去了解新的东西，要不断更新你现在的知识。 </p>
-<p>对项目有要求，让项目造就你能力的提升。    </p>
-<p>找一个好的能解决技术问题的人，这样提升会快一点。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/19/2015-04-19-D-day技术分享沙龙整理/" data-id="cicg8veq40000xq0kvs4acxcs" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
-  
-</section>
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-Java中的注解" data-title="Java中的注解" data-url="http://yoursite.com/2015/07/23/Java中的注解/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'smilesun'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  </section>
         
           <aside id="sidebar">
   
