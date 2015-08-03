@@ -65,6 +65,78 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2015-04-19-D-day技术分享沙龙整理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/" class="article-date">
+  <time datetime="2015-04-19T02:59:36.000Z" itemprop="datePublished">2015-04-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/19/2015-04-19-D-day技术分享沙龙整理/">D-day技术分享沙龙整理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="http://i2.tietuku.com/259b179bbf3810c1.jpg" alt="">  </p>
+<p>第一次参加<code>SegmentFault</code>组织的活动，收获很大。活动现场氛围特别棒，特别是那个抽奖的页面真的很棒，很想把源码拿过来学习下。唯一的遗憾就是今天没有抽到奖。  </p>
+<h2 id="寸志_前端开发与用户体验">寸志 前端开发与用户体验</h2><p>今天主要是去听<code>Teambition</code>的寸志老师去的，想去听寸志分享前端干货。这次寸志老师分享的主题是《前端开发与用户体验》，以<code>Teambition</code>的产品为例介绍前端技术在改进产品用户体验方面的应用。<br>{<1>}<img src="http://i2.tietuku.com/844766d38380d629.png" alt=""></1></p>
+<p>之前有用过<code>Teambition</code>这个团队协作工具来和后端同学进行合作过。感觉这个产品的用户体验过特别好。今天从寸志老师才得知产品用户体验过好是因为他们老板齐俊元是很重视设计。（果然老板重视设计就是不一样啊！）<br><code>Teambition</code>采用的前端框架是<code>Backbone</code>。之前听说这个前端框架，一个和<code>AngularJs</code>差不多前端<code>MVC</code>前端框架。但是比<code>AngularJs</code>出来早，<code>Teambition</code>团队采用<code>Backbone</code>加上<code>jquery</code>的一些插件来打造无刷新的交互体验。为什么选择<code>Backbone</code>是因为没有双向绑定，只会更新修改的部分，而不会更新其他部分。（对前端js框架还不是很了解，如果有叙述错误还请指正。）但我觉得对于前端工程师个人而言，<code>AngularJs</code>还是很适合我们的，毕竟它帮我们做了太多的事情。自己最近在研究Facebook的React,很想自己用React Native搞个自己的IOS APP出来。  </p>
+<p>自己最近一直在研究<code>HTML5</code>的一些新的JS API，今天寸志介绍他们在自己的产品<code>Teambition</code>中采用HTML5新的<code>Notification</code>API 在用户关闭浏览器的情况下来通知用户新的信息。使用<code>Offline Web Application</code>来离线一些资源，这样在用户断网的情况下同样可以获得很好的体验。自己在最后的圆桌环节同时也向今天的四位分享人提问了在现在的成熟的<code>Web</code>产品中有哪些新的HTML5的特性在产品中有应用。<br>我这里初略整理了一下答案：  </p>
+<ul>
+<li>使用localStorage来储存一些用户的信息，在一些web的应用中会采用indexDB来储存一些数据到本地。</li>
+<li>使用<code>Notification</code>API在用户没有使用浏览器的浏览网站的情况下来通知用户一些信息。</li>
+<li>使用<code>Offline Web Application</code>来离线一些资源，这样让用户特殊情况下没网时也能获得不错的体验!</li>
+<li>使用CSS3的像animation这种新的特性来制作动画效果。</li>
+</ul>
+<p><img src="http://i2.tietuku.com/16547a28f187c0d2.png" alt="">  </p>
+<p>现在网页设计需要考虑多终端，也就是响应式，在分享中寸志老师分享了他们团队优化响应式的经验：  </p>
+<ol>
+<li>他们会先设计手机的版本，然后由手机版本变更到PC版和PAD版本。  </li>
+<li>对于iphone的Retina屏幕他们会把图片的大小做到两倍大小，然后使用CSS来把图片大小缩小到一倍。</li>
+<li>使用CSS单位rem,然后使用js来控制根元素html里面的font-size。<br>此外分享中提及了：</li>
+</ol>
+<ul>
+<li>利用CSS3的动画来制作动画，给用户带来愉悦感。</li>
+<li>使用webfont来代替图片图标</li>
+<li>用<a href="https://github.com/mllrsohn/node-webkit-builder" target="_blank" rel="external">node-webkit</a>来把网页应用分装成单个应用。  </li>
+</ul>
+<h4 id="除了寸志老师的前端分享外之外,分享的嘉宾还有又拍云的张聪，扇贝网，暴走漫画的丁彦。因为自己最熟悉的是前端，对于后端和运维不是特别熟悉，所以这里不谢关于这三位大牛的总结了。">除了寸志老师的前端分享外之外,分享的嘉宾还有又拍云的张聪，扇贝网，暴走漫画的丁彦。因为自己最熟悉的是前端，对于后端和运维不是特别熟悉，所以这里不谢关于这三位大牛的总结了。</h4><p>下面是这三位大牛的演讲文稿:  </p>
+<ul>
+<li><a href="http://pan.baidu.com/s/1hqELDqs" target="_blank" rel="external">《Using ngx_lua in UPYUN》</a>-又拍云的张聪</li>
+<li><a href="http://pan.baidu.com/s/1jGswSiq" target="_blank" rel="external">《Ansible 在云环境中的使用》</a>-扇贝网的吴焱红 </li>
+<li><a href="http://pan.baidu.com/s/1pJzEpx5" target="_blank" rel="external">《暴走漫画数据挖掘从 0 到 1》</a>—暴走漫画的丁彦</li>
+</ul>
+<h3 id="圆桌讨论问答">圆桌讨论问答</h3><h4 id="1-_从一个普通的技术开发，到稍有知名度的开发者，你们觉得最艰难的时段是哪个时段？">1. 从一个普通的技术开发，到稍有知名度的开发者，你们觉得最艰难的时段是哪个时段？</h4><p>入门阶段，会受打击，但要端正心态。  </p>
+<p>每个人做的选择不一样，有很多路，没有哪一条是对的，要选择一条最合适你的。  </p>
+<p>技术面要广，多关注，多接触。  </p>
+<p>订阅技术博客，每天度技术文章，提高自己阅读量。  </p>
+<p>一个学习的心态，要不停的去了解新的东西，要不断更新你现在的知识。 </p>
+<p>对项目有要求，让项目造就你能力的提升。    </p>
+<p>找一个好的能解决技术问题的人，这样提升会快一点。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/19/2015-04-19-D-day技术分享沙龙整理/" data-id="cicvn00ui0000kx0kwg2qfx0d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Mysql之Mac下卸载大法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/04/04/Mysql之Mac下卸载大法/" class="article-date">
@@ -103,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/04/Mysql之Mac下卸载大法/" data-id="cicg8ver60005xq0krvi6yk6m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/04/04/Mysql之Mac下卸载大法/" data-id="cicvn00yi0006kx0k7yh59ydd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,194 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/03/30/编码之MySQL数据库编码/" data-id="cicg8veqz0002xq0kjlz3sekb" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-多态" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/02/28/多态/" class="article-date">
-  <time datetime="2015-02-28T14:23:48.000Z" itemprop="datePublished">2015-02-28</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/02/28/多态/">多态</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>多态，就是指一个引用(类型)在不同情况下的多种状态。也可以理解成：多态是指通过指向父类的指针，来调用在不同子类中实现的方法。</p>
-<p>实现多态有两种方式：1、继承；2、接口</p>
-<pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
-        <span class="comment">//非多态演示</span>
-        Cat cat=<span class="keyword">new</span> Cat();
-        cat.cry();
-        Dog dog=<span class="keyword">new</span> Dog();
-        dog.cry();
-        <span class="comment">//多态演示</span>
-        Animal an=<span class="keyword">new</span> Cat();
-        an.cry();
-        an=<span class="keyword">new</span> Dog();
-        an.cry();
-    }
-}
-<span class="comment">//动物类</span>
-<span class="keyword">class</span> <span class="title">Animal</span>{
-    String name;
-    <span class="keyword">int</span> age;
-    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{
-        <span class="keyword">return</span> name;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>{
-        <span class="keyword">this</span>.name = name;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{
-        <span class="keyword">return</span> age;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>{
-        <span class="keyword">this</span>.age = age;
-    }
-    <span class="comment">//动物会叫</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"不知道怎么叫"</span>);
-    }
-}
-<span class="comment">//创建Dog子类并继承Animal父类及覆盖cry方法</span>
-<span class="keyword">class</span> <span class="title">Dog</span> <span class="title">extends</span> <span class="title">Animal</span>{
-    <span class="comment">//狗叫</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"汪汪叫"</span>);
-    }
-}
-<span class="keyword">class</span> <span class="title">Cat</span> <span class="title">extends</span> <span class="title">Animal</span>{
-    <span class="comment">//猫自己叫</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"猫猫叫"</span>);
-    }
-}
-
-
-多重多态演示
-<span class="comment">//演示子类继承父类、方法覆盖、多态方法</span>
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo123</span> {
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
-        <span class="comment">//非多态演示</span>
-        System.<span class="keyword">out</span>.println(<span class="string">"非多态演示:"</span>);
-        Cat cat=<span class="keyword">new</span> Cat();
-        cat.cry();
-        Dog dog=<span class="keyword">new</span> Dog();
-        dog.cry();
-        System.<span class="keyword">out</span>.println();        
-        <span class="comment">//多态演示</span>
-        System.<span class="keyword">out</span>.println(<span class="string">"多态演示:"</span>);
-        Animal an=<span class="keyword">new</span> Cat();
-        an.cry();
-        an=<span class="keyword">new</span> Dog();
-        an.cry();
-        System.<span class="keyword">out</span>.println();    
-        <span class="comment">//多重多态演示</span>
-        System.<span class="keyword">out</span>.println(<span class="string">"多重多态演示:"</span>);
-        Master master=<span class="keyword">new</span> Master();
-        master.feed(<span class="keyword">new</span> Dog(),<span class="keyword">new</span> Bone());
-        master.feed(<span class="keyword">new</span> Cat(),<span class="keyword">new</span> Fish());
-    }
-}
-<span class="comment">//主人类</span>
-<span class="keyword">class</span> <span class="title">Master</span>{
-    <span class="comment">//给动物喂食物，使用多态，只要写一个方法</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">feed</span><span class="params">(Animal an,Food f)</span></span>{
-        an.eat();
-        f.showName();
-    }
-}
-<span class="comment">//食物父类</span>
-<span class="keyword">class</span> <span class="title">Food</span>{
-    String name;
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"食物"</span>);
-    }
-}
-<span class="comment">//食物鱼子类</span>
-<span class="keyword">class</span> <span class="title">Fish</span> <span class="title">extends</span> <span class="title">Food</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"鱼"</span>);
-    }
-}
-<span class="comment">//食物骨头子类</span>
-<span class="keyword">class</span> <span class="title">Bone</span> <span class="title">extends</span> <span class="title">Food</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"骨头"</span>);
-    }
-}
-<span class="comment">//动物类Animal父类</span>
-<span class="keyword">class</span> <span class="title">Animal</span>{
-    String name;
-    <span class="keyword">int</span> age;
-
-    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{
-        <span class="keyword">return</span> name;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>{
-        <span class="keyword">this</span>.name = name;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{
-        <span class="keyword">return</span> age;
-    }
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>{
-        <span class="keyword">this</span>.age = age;
-    }
-    <span class="comment">//动物会叫</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"不知道怎么叫"</span>);
-    }
-    <span class="comment">//动物吃东西</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"不知道吃什么"</span>);
-    }
-}
-<span class="comment">//创建Dog子类并extends继承Animal父类及覆盖cry方法</span>
-<span class="keyword">class</span> <span class="title">Dog</span> <span class="title">extends</span> <span class="title">Animal</span>{
-    <span class="comment">//狗叫</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"汪汪叫"</span>);
-    }
-    <span class="comment">//狗吃东西</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"狗爱吃骨头"</span>);
-    }
-}
-<span class="keyword">class</span> <span class="title">Cat</span> <span class="title">extends</span> <span class="title">Animal</span>{
-    <span class="comment">//猫自己叫</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"猫猫叫"</span>);
-    }
-    <span class="comment">//猫吃东西</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"猫爱吃鱼"</span>);
-    }
-}
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/28/多态/" data-id="cicg8ver10003xq0kkq14uldt" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/03/30/编码之MySQL数据库编码/" data-id="cicvn00ya0002kx0kz3r4gxrl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -379,7 +264,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -389,6 +274,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/08/03/Python环境采坑小记/">Python环境采坑小记</a>
+          </li>
         
           <li>
             <a href="/2015/07/23/Java中的注解/">Java中的注解</a>
@@ -404,10 +293,6 @@
         
           <li>
             <a href="/2015/04/04/Mysql之Mac下卸载大法/">Mysql之Mac下卸载大法</a>
-          </li>
-        
-          <li>
-            <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
           </li>
         
       </ul>

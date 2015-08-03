@@ -65,6 +65,193 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-多态" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/28/多态/" class="article-date">
+  <time datetime="2015-02-28T14:23:48.000Z" itemprop="datePublished">2015-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/02/28/多态/">多态</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>多态，就是指一个引用(类型)在不同情况下的多种状态。也可以理解成：多态是指通过指向父类的指针，来调用在不同子类中实现的方法。</p>
+<p>实现多态有两种方式：1、继承；2、接口</p>
+<pre><code><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="comment">//非多态演示</span>
+        Cat cat=<span class="keyword">new</span> Cat();
+        cat.cry();
+        Dog dog=<span class="keyword">new</span> Dog();
+        dog.cry();
+        <span class="comment">//多态演示</span>
+        Animal an=<span class="keyword">new</span> Cat();
+        an.cry();
+        an=<span class="keyword">new</span> Dog();
+        an.cry();
+    }
+}
+<span class="comment">//动物类</span>
+<span class="keyword">class</span> <span class="title">Animal</span>{
+    String name;
+    <span class="keyword">int</span> age;
+    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>{
+        <span class="keyword">this</span>.name = name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> age;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>{
+        <span class="keyword">this</span>.age = age;
+    }
+    <span class="comment">//动物会叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"不知道怎么叫"</span>);
+    }
+}
+<span class="comment">//创建Dog子类并继承Animal父类及覆盖cry方法</span>
+<span class="keyword">class</span> <span class="title">Dog</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//狗叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"汪汪叫"</span>);
+    }
+}
+<span class="keyword">class</span> <span class="title">Cat</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//猫自己叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"猫猫叫"</span>);
+    }
+}
+
+
+多重多态演示
+<span class="comment">//演示子类继承父类、方法覆盖、多态方法</span>
+<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo123</span> {
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>{
+        <span class="comment">//非多态演示</span>
+        System.<span class="keyword">out</span>.println(<span class="string">"非多态演示:"</span>);
+        Cat cat=<span class="keyword">new</span> Cat();
+        cat.cry();
+        Dog dog=<span class="keyword">new</span> Dog();
+        dog.cry();
+        System.<span class="keyword">out</span>.println();        
+        <span class="comment">//多态演示</span>
+        System.<span class="keyword">out</span>.println(<span class="string">"多态演示:"</span>);
+        Animal an=<span class="keyword">new</span> Cat();
+        an.cry();
+        an=<span class="keyword">new</span> Dog();
+        an.cry();
+        System.<span class="keyword">out</span>.println();    
+        <span class="comment">//多重多态演示</span>
+        System.<span class="keyword">out</span>.println(<span class="string">"多重多态演示:"</span>);
+        Master master=<span class="keyword">new</span> Master();
+        master.feed(<span class="keyword">new</span> Dog(),<span class="keyword">new</span> Bone());
+        master.feed(<span class="keyword">new</span> Cat(),<span class="keyword">new</span> Fish());
+    }
+}
+<span class="comment">//主人类</span>
+<span class="keyword">class</span> <span class="title">Master</span>{
+    <span class="comment">//给动物喂食物，使用多态，只要写一个方法</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">feed</span><span class="params">(Animal an,Food f)</span></span>{
+        an.eat();
+        f.showName();
+    }
+}
+<span class="comment">//食物父类</span>
+<span class="keyword">class</span> <span class="title">Food</span>{
+    String name;
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"食物"</span>);
+    }
+}
+<span class="comment">//食物鱼子类</span>
+<span class="keyword">class</span> <span class="title">Fish</span> <span class="title">extends</span> <span class="title">Food</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"鱼"</span>);
+    }
+}
+<span class="comment">//食物骨头子类</span>
+<span class="keyword">class</span> <span class="title">Bone</span> <span class="title">extends</span> <span class="title">Food</span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showName</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"骨头"</span>);
+    }
+}
+<span class="comment">//动物类Animal父类</span>
+<span class="keyword">class</span> <span class="title">Animal</span>{
+    String name;
+    <span class="keyword">int</span> age;
+
+    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>{
+        <span class="keyword">this</span>.name = name;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>{
+        <span class="keyword">return</span> age;
+    }
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>{
+        <span class="keyword">this</span>.age = age;
+    }
+    <span class="comment">//动物会叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"不知道怎么叫"</span>);
+    }
+    <span class="comment">//动物吃东西</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"不知道吃什么"</span>);
+    }
+}
+<span class="comment">//创建Dog子类并extends继承Animal父类及覆盖cry方法</span>
+<span class="keyword">class</span> <span class="title">Dog</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//狗叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"汪汪叫"</span>);
+    }
+    <span class="comment">//狗吃东西</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"狗爱吃骨头"</span>);
+    }
+}
+<span class="keyword">class</span> <span class="title">Cat</span> <span class="title">extends</span> <span class="title">Animal</span>{
+    <span class="comment">//猫自己叫</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">cry</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"猫猫叫"</span>);
+    }
+    <span class="comment">//猫吃东西</span>
+    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">eat</span><span class="params">()</span></span>{
+        System.<span class="keyword">out</span>.println(<span class="string">"猫爱吃鱼"</span>);
+    }
+}
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/28/多态/" data-id="cicvn00yc0003kx0kiyevs8yh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-内存溢出解决方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/02/13/内存溢出解决方法/" class="article-date">
@@ -95,7 +282,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/13/内存溢出解决方法/" data-id="cicg8ver40004xq0kz52k5mqm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/02/13/内存溢出解决方法/" data-id="cicvn00ye0004kx0knvt6x78g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,55 +409,7 @@ public <span class="class"><span class="keyword">class</span> <span class="title
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/02/09/Java之重载和覆盖/" data-id="cicg8ver80006xq0kf2gzongu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-项目开发流程" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/30/项目开发流程/" class="article-date">
-  <time datetime="2015-01-30T01:22:54.000Z" itemprop="datePublished">2015-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/30/项目开发流程/">项目开发流程</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>昨晚听了一节在线公开课，主讲老师有8年在腾讯的开发经验，他和我们分享了一个大型Java项目的开发流程，我整理了一下:</p>
-<ol>
-<li>新建Javaweb项目；</li>
-<li>建立静态页面；</li>
-<li>编写后台的业务逻辑；</li>
-<li>连接数据库（打通前后台），实现动态化；</li>
-<li>大数据处理，安全化、性能优化；</li>
-<li>测试：内侧（黑盒&lt;功能性测试&gt;，白盒&lt;代码&gt;）、公测（目标用户参与测试）；</li>
-<li>试运营（找bug）；</li>
-<li>正式上线运营，根据需求、市场，“小步快跑、快速迭代”改版；</li>
-<li>维护。</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/30/项目开发流程/" data-id="cicg8veqx0001xq0kj1nd79op" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/02/09/Java之重载和覆盖/" data-id="cicvn00yk0007kx0kwo45kg7u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -299,7 +438,7 @@ public <span class="class"><span class="keyword">class</span> <span class="title
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -309,6 +448,10 @@ public <span class="class"><span class="keyword">class</span> <span class="title
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/08/03/Python环境采坑小记/">Python环境采坑小记</a>
+          </li>
         
           <li>
             <a href="/2015/07/23/Java中的注解/">Java中的注解</a>
@@ -324,10 +467,6 @@ public <span class="class"><span class="keyword">class</span> <span class="title
         
           <li>
             <a href="/2015/04/04/Mysql之Mac下卸载大法/">Mysql之Mac下卸载大法</a>
-          </li>
-        
-          <li>
-            <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
           </li>
         
       </ul>

@@ -65,6 +65,54 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-项目开发流程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/01/30/项目开发流程/" class="article-date">
+  <time datetime="2015-01-30T01:22:54.000Z" itemprop="datePublished">2015-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/30/项目开发流程/">项目开发流程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨晚听了一节在线公开课，主讲老师有8年在腾讯的开发经验，他和我们分享了一个大型Java项目的开发流程，我整理了一下:</p>
+<ol>
+<li>新建Javaweb项目；</li>
+<li>建立静态页面；</li>
+<li>编写后台的业务逻辑；</li>
+<li>连接数据库（打通前后台），实现动态化；</li>
+<li>大数据处理，安全化、性能优化；</li>
+<li>测试：内侧（黑盒&lt;功能性测试&gt;，白盒&lt;代码&gt;）、公测（目标用户参与测试）；</li>
+<li>试运营（找bug）；</li>
+<li>正式上线运营，根据需求、市场，“小步快跑、快速迭代”改版；</li>
+<li>维护。</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/01/30/项目开发流程/" data-id="cicvn00y10001kx0k67h2tzbz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Java之封装" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/01/25/Java之封装/" class="article-date">
@@ -146,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/25/Java之封装/" data-id="cicg8verk000bxq0ket0hdwaw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/25/Java之封装/" data-id="cicvn00yw000ckx0klk6aqfst" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,93 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/22/Java之类变量、类方法/" data-id="cicg8vera0007xq0kw7kpl2da" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Java之this" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/01/20/Java之this/" class="article-date">
-  <time datetime="2015-01-20T13:17:24.000Z" itemprop="datePublished">2015-01-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/01/20/Java之this/">Java之this</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>java虚拟机会给每个对象分配<span class="keyword">this</span>,代表当前对象。
-</code></pre><p>注意：</p>
-<ol>
-<li>this是属于一个对象，不属于类的。</li>
-<li>this不能在类定义的外部使用，只能在类定义的方法中使用</li>
-</ol>
-<pre><code><span class="comment">/*
-    this的必要性
-*/</span>
-<span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Demo</span>{
-    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String []args)</span></span>{
-        Dog dog1=<span class="keyword">new</span> Dog(<span class="number">2</span>,<span class="string">"大黄"</span>);
-            Person p1=<span class="keyword">new</span> Person(dog1,<span class="number">23</span>,<span class="string">"郭德纲"</span>);
-            Person p2=<span class="keyword">new</span> Person(dog1,<span class="number">24</span>,<span class="string">"刘谦"</span>);
-        p1.showInfo();    
-    p1.dog.showInfo();
-    }
-}
-<span class="comment">//定义一个人类</span>
-<span class="keyword">class</span> <span class="title">Person</span>{
-    <span class="comment">//成员变量</span>
-    <span class="keyword">int</span> age;
-    String name;
-    Dog dog;<span class="comment">//引用类型</span>
-    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(Dog dog,<span class="keyword">int</span> age,String name)</span></span>{
-        <span class="comment">//可读性不好</span>
-        <span class="comment">//age=age;</span>
-        <span class="comment">//name=name;</span>
-        <span class="keyword">this</span>.age=age; <span class="comment">//this.age指this代词指定是成员变量age</span>
-        <span class="keyword">this</span>.name=name; <span class="comment">//this.name指this代词指定是成员变量name</span>
-        <span class="keyword">this</span>.dog=dog;
-    }
-<span class="comment">//显示人名字</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"人名是："</span>+<span class="keyword">this</span>.name);
-        }
-    }
-
-<span class="keyword">class</span> <span class="title">Dog</span>{
-    <span class="keyword">int</span> age;
-    String name;
-    <span class="function"><span class="keyword">public</span> <span class="title">Dog</span><span class="params">(<span class="keyword">int</span> age,String name)</span></span>{
-        <span class="keyword">this</span>.age=age;
-        <span class="keyword">this</span>.name=name;
-    }
-    <span class="comment">//显示狗名</span>
-    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">showInfo</span><span class="params">()</span></span>{
-        System.<span class="keyword">out</span>.println(<span class="string">"狗名叫"</span>+<span class="keyword">this</span>.name);
-    }
-}
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/01/20/Java之this/" data-id="cicg8verp000exq0kvxrp78ro" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/01/22/Java之类变量、类方法/" data-id="cicvn00yl0008kx0kl3r3aif1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -365,7 +327,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">七月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">四月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/03/">三月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">二月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">一月 2015</a><span class="archive-list-count">9</span></li></ul>
     </div>
   </div>
 
@@ -375,6 +337,10 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/08/03/Python环境采坑小记/">Python环境采坑小记</a>
+          </li>
         
           <li>
             <a href="/2015/07/23/Java中的注解/">Java中的注解</a>
@@ -390,10 +356,6 @@
         
           <li>
             <a href="/2015/04/04/Mysql之Mac下卸载大法/">Mysql之Mac下卸载大法</a>
-          </li>
-        
-          <li>
-            <a href="/2015/03/30/编码之MySQL数据库编码/">编码之MySQL数据库编码</a>
           </li>
         
       </ul>
